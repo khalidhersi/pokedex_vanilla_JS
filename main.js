@@ -14,39 +14,39 @@ let regionModifierStart = 1;
 let regionModifierEnd = pokemonNum;
 
 
-const btnOnClick = (event) => {
-    if(event.target.innerHTML == "Kanto"){
-        regionModifierStart = 1;
-        regionModifierEnd = 151;
-        console.log("kanto")
-    } else if(event.target.innerHTML == "Johto"){
-        regionModifierStart = 152;
-        regionModifierEnd = 251;
-        console.log(regionModifierEnd)
-    } else if(event.target.innerHTML == "Hoenn"){
-        regionModifierStart = 252;
-        regionModifierEnd = 386;
-    } else if(event.target.innerHTML == "Sinnoh"){
-        regionModifierStart = 387;
-        regionModifierEnd = 493;
-    } else if(event.target.innerHTML == "Unova"){
-        regionModifierStart = 494;
-        regionModifierEnd = 649;
-    } else if(event.target.innerHTML == "Kalos"){
-        regionModifierStart = 650;
-        regionModifierEnd = 721;
-    } else if(event.target.innerHTML == "Alola"){
-        regionModifierStart = 722;
-        regionModifierEnd = 809;
-    } else if(event.target.innerHTML == "Galar"){
-        regionModifierStart = 810;
-        regionModifierEnd = 905;
-    } else {
-        regionModifierStart = 1;
-        regionModifierEnd = 905;
-    }
-    console.log(regionModifierEnd)
-    return regionModifierStart, regionModifierEnd
+// const btnOnClick = (event) => {
+//     if(event.target.innerHTML == "Kanto"){
+//         regionModifierStart = 1;
+//         regionModifierEnd = 151;
+//         console.log("kanto")
+//     } else if(event.target.innerHTML == "Johto"){
+//         regionModifierStart = 152;
+//         regionModifierEnd = 251;
+//         console.log(regionModifierEnd)
+//     } else if(event.target.innerHTML == "Hoenn"){
+//         regionModifierStart = 252;
+//         regionModifierEnd = 386;
+//     } else if(event.target.innerHTML == "Sinnoh"){
+//         regionModifierStart = 387;
+//         regionModifierEnd = 493;
+//     } else if(event.target.innerHTML == "Unova"){
+//         regionModifierStart = 494;
+//         regionModifierEnd = 649;
+//     } else if(event.target.innerHTML == "Kalos"){
+//         regionModifierStart = 650;
+//         regionModifierEnd = 721;
+//     } else if(event.target.innerHTML == "Alola"){
+//         regionModifierStart = 722;
+//         regionModifierEnd = 809;
+//     } else if(event.target.innerHTML == "Galar"){
+//         regionModifierStart = 810;
+//         regionModifierEnd = 905;
+//     } else {
+//         regionModifierStart = 1;
+//         regionModifierEnd = 905;
+//     }
+//     console.log(regionModifierEnd)
+//     return regionModifierStart, regionModifierEnd
     
 
 
@@ -88,16 +88,15 @@ const btnOnClick = (event) => {
 //         regionModifierStart = 1;
 //         regionModifierEnd = 905;
 // }
-}
+// }
+// console.log(regionModifierEnd)
 
-console.log(regionModifierEnd)
 
-
-button.forEach(item => {
-    item.addEventListener('click', event => {
-      btnOnClick(event)
-    })
-  })
+// button.forEach(item => {
+//     item.addEventListener('click', event => {
+//       btnOnClick(event)
+//     })
+//   })
 
 const colors = {
   fire: "#FDDFDF",
