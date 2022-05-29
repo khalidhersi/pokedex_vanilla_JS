@@ -13,44 +13,91 @@ const galarButton = document.getElementById("galar");
 let regionModifierStart = 1;
 let regionModifierEnd = pokemonNum;
 
-switch (button.innerHTML) {
-    case "Kanto":
+
+const btnOnClick = (event) => {
+    if(event.target.innerHTML == "Kanto"){
         regionModifierStart = 1;
         regionModifierEnd = 151;
-    break;
-    case "Johto":
+        console.log("kanto")
+    } else if(event.target.innerHTML == "Johto"){
         regionModifierStart = 152;
         regionModifierEnd = 251;
-    break;
-    case "Hoenn":
+        console.log(regionModifierEnd)
+    } else if(event.target.innerHTML == "Hoenn"){
         regionModifierStart = 252;
         regionModifierEnd = 386;
-    break;
-    case "Sinnoh":
+    } else if(event.target.innerHTML == "Sinnoh"){
         regionModifierStart = 387;
         regionModifierEnd = 493;
-    break;
-    case "Unova":
+    } else if(event.target.innerHTML == "Unova"){
         regionModifierStart = 494;
         regionModifierEnd = 649;
-    break;
-    case "Kalos":
+    } else if(event.target.innerHTML == "Kalos"){
         regionModifierStart = 650;
         regionModifierEnd = 721;
-    break;
-    case "Alola":
+    } else if(event.target.innerHTML == "Alola"){
         regionModifierStart = 722;
         regionModifierEnd = 809;
-    break;
-    case "Galar":
+    } else if(event.target.innerHTML == "Galar"){
         regionModifierStart = 810;
         regionModifierEnd = 905;
-    break;
-    default:
+    } else {
         regionModifierStart = 1;
         regionModifierEnd = 905;
+    }
+    console.log(regionModifierEnd)
+    return regionModifierStart, regionModifierEnd
+    
+
+
+// switch (button) {
+//     case "Kanto":
+//         regionModifierStart = 1;
+//         regionModifierEnd = 151;
+//         console.log("kanto")
+//     break;
+//     case "Johto":
+//         regionModifierStart = 152;
+//         regionModifierEnd = 251;
+//     break;
+//     case "Hoenn":
+//         regionModifierStart = 252;
+//         regionModifierEnd = 386;
+//     break;
+//     case "Sinnoh":
+//         regionModifierStart = 387;
+//         regionModifierEnd = 493;
+//     break;
+//     case "Unova":
+//         regionModifierStart = 494;
+//         regionModifierEnd = 649;
+//     break;
+//     case "Kalos":
+//         regionModifierStart = 650;
+//         regionModifierEnd = 721;
+//     break;
+//     case "Alola":
+//         regionModifierStart = 722;
+//         regionModifierEnd = 809;
+//     break;
+//     case "Galar":
+//         regionModifierStart = 810;
+//         regionModifierEnd = 905;
+//     break;
+//     default:
+//         regionModifierStart = 1;
+//         regionModifierEnd = 905;
+// }
 }
 
+console.log(regionModifierEnd)
+
+
+button.forEach(item => {
+    item.addEventListener('click', event => {
+      btnOnClick(event)
+    })
+  })
 
 const colors = {
   fire: "#FDDFDF",
@@ -80,7 +127,6 @@ const getPokemon = async (id) => {
   let url = `https://pokeapi.co/api/v2/pokemon/${id}`;
   const response = await fetch(url);
   const pokemon = await response.json();
-  console.log(pokemon);
   createPokemonCard(pokemon);
 };
 
